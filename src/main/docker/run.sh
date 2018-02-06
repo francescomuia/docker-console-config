@@ -1,0 +1,1 @@
+docker run -d -it --hostname=docker.console.config.it --name=docker.console.config.it fmuiapps/docker-console-config
