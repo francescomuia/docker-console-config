@@ -1,10 +1,3 @@
-spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/francescomuia/docker-console-config-server.git
-          clone-on-start: true
 server:
   port: 8888
   
@@ -12,3 +5,23 @@ security:
   user: 
     name: root
     password: s3cr3t
+  
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/francescomuia/docker-console-config-server.git
+          clone-on-start: true
+
+---
+
+spring:
+  profiles: local
+  cloud:
+    config:
+      server:
+        git:
+          uri: file://home/fmuia/workspace-sts/docker-console-config-server/
+          clone-on-start: true
+ 
